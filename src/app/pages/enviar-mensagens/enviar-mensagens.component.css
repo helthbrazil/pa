@@ -1,0 +1,10 @@
+.example-chip-list {
+  width: 90%;
+}
+
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
