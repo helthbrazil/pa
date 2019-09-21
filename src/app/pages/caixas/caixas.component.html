@@ -3,15 +3,21 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right:10px" matBadge="23" matBadgeColor="warn" class="example-tab-icon" svgIcon="in"></mat-icon>
+        <mat-icon style="margin-right:10px" matBadge="23" matBadgeColor="warn" class="example-tab-icon" svgIcon="in">
+        </mat-icon>
         Entrada
       </ng-template>
-      <pmmg-caixa-entrada></pmmg-caixa-entrada>
+      <perfect-scrollbar [config]='config'>
+        <div style="height: 80vh">
+          <pmmg-caixa-entrada></pmmg-caixa-entrada>
+        </div>
+      </perfect-scrollbar>
     </mat-tab>
 
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right:10px" matBadge="10" matBadgeColor="warn" class="example-tab-icon" svgIcon="out"></mat-icon>
+        <mat-icon style="margin-right:10px" matBadge="10" matBadgeColor="warn" class="example-tab-icon" svgIcon="out">
+        </mat-icon>
         Saída
       </ng-template>
       <div class="content">
@@ -21,7 +27,8 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right:10px" matBadge="7" matBadgeColor="warn" class="example-tab-icon" svgIcon="pasta"></mat-icon>
+        <mat-icon style="margin-right:10px" matBadge="7" matBadgeColor="warn" class="example-tab-icon" svgIcon="pasta">
+        </mat-icon>
         Arquivo
       </ng-template>
 
@@ -37,7 +44,8 @@
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon style="margin-right:10px" matBadge="90" matBadgeColor="warn" class="example-tab-icon" svgIcon="lixeira"></mat-icon>
+        <mat-icon style="margin-right:10px" matBadge="90" matBadgeColor="warn" class="example-tab-icon"
+          svgIcon="lixeira"></mat-icon>
         Lixeira
       </ng-template>
 

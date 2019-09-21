@@ -5,36 +5,37 @@
 </section>
 
 <div class="content">
-  <mat-form-field class="example-chip-list">
-    <mat-chip-list #chipList aria-label="destinatarios">
-      <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
-        (removed)="remove(fruit)">
-        {{fruit.name}}
-        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-      </mat-chip>
-      <input placeholder="Destinatários" [matChipInputFor]="chipList"
-        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
-        (matChipInputTokenEnd)="add($event)">
-    </mat-chip-list>
-  </mat-form-field>
-  <br>
-  <ck-editor [config]="config" name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="pt"
-    [fullPage]="true"></ck-editor>
-  <br>
+  <perfect-scrollbar [config]='configScroll'>
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList aria-label="destinatarios">
+        <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+          (removed)="remove(fruit)">
+          {{fruit.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Destinatários" [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+          (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+    <br>
+    <ck-editor [config]="config" name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="pt"
+      [fullPage]="true"></ck-editor>
+    <br>
 
-  <button style="margin-right: 10px;" (click)="enviarMensagem()" mat-raised-button color="primary">
-    <mat-icon>send</mat-icon> Enviar
-  </button>
+    <button style="margin-right: 10px;" (click)="enviarMensagem()" mat-raised-button color="primary">
+      <mat-icon>send</mat-icon> Enviar
+    </button>
 
-  <button style="margin-right: 10px;" (click)="picker.open()" mat-raised-button color="primary">
-    <mat-icon>schedule</mat-icon>Programar
-  </button>
+    <button style="margin-right: 10px;" (click)="picker.open()" mat-raised-button color="primary">
+      <mat-icon>schedule</mat-icon>Programar
+    </button>
 
-  <mat-form-field class="example-full-width">
-    <input matInput [matDatepicker]="picker" placeholder="Escolha a data de envio">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker touchUi #picker></mat-datepicker>
-  </mat-form-field>
-  
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Escolha a data de envio">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
 
+  </perfect-scrollbar>
 </div>

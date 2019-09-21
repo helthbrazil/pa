@@ -18,77 +18,16 @@ export class CaixaEntradaComponent implements OnInit {
 
   ngOnInit() {
     this.mensagens = new Array<Mensagem>();
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
 
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
+    for (let i = 0; i <  30; i++) {
+      this.mensagens.push({
+        nome: 'Hebert Ferreira',
+        assunto: 'Qualquer',
+        horario: '00:23'
+      });
+    }
 
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
 
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
-
-    this.mensagens.push({
-      nome: 'Hebert Ferreira',
-      assunto: 'Qualquer',
-      horario: '00:23'
-    });
   }
 
 }

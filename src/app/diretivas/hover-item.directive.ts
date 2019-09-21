@@ -12,7 +12,7 @@ export class HoverItemDirective {
   }
 
   @HostListener('mouseover') onHover() {
-    this.el.nativeElement.style.backgroundColor = '#f2f2f2';
+    this.el.nativeElement.style.backgroundColor = '#f5f5f5';
     this.el.nativeElement.style.cursor = 'pointer';
   }
 

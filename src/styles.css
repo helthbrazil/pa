@@ -5,4 +5,5 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
 
 .content {
     padding: 20px;
+    height: calc(100% - 70px);
 }
