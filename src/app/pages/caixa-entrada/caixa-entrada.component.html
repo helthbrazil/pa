@@ -1,0 +1,5 @@
+<mat-list>
+  <pmmg-mensagem-item *ngFor="let mensagem of mensagens" [assunto]="mensagem?.assunto" [nome]="mensagem?.nome"
+    [horario]="mensagem?.horario">
+  </pmmg-mensagem-item>
+</mat-list>

@@ -13,6 +13,10 @@ import { ProcessosComponent } from './pages/processos/processos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ngx-ckeditor';
+import { MAT_DATE_LOCALE } from '@angular/material';
+import { CaixaEntradaComponent } from './pages/caixa-entrada/caixa-entrada.component';
+import { MensagemItemComponent } from './components/mensagem-item/mensagem-item.component';
+import { HoverItemDirective } from './diretivas/hover-item.directive';
 
 
 @NgModule({
@@ -22,7 +26,10 @@ import { CKEditorModule } from 'ngx-ckeditor';
     ConfiguracoesComponent,
     EnviarMensagensComponent,
     GruposComponent,
-    ProcessosComponent
+    ProcessosComponent,
+    CaixaEntradaComponent,
+    MensagemItemComponent,
+    HoverItemDirective
   ],
   imports: [
     BrowserAnimationsModule,
@@ -34,7 +41,7 @@ import { CKEditorModule } from 'ngx-ckeditor';
     CKEditorModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

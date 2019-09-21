@@ -8,13 +8,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
   imports: [
@@ -22,13 +25,15 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatButtonModule, MatToolbarModule, MatIconModule, MatTabsModule,
     MatSidenavModule, MatListModule, MatTooltipModule, MatMenuModule,
     MatFormFieldModule, MatSelectModule, MatInputModule, MatBadgeModule,
-    MatChipsModule, MatSnackBarModule, MatProgressBarModule
+    MatChipsModule, MatSnackBarModule, MatProgressBarModule, MatDatepickerModule,
+    MatDatepickerModule, MatNativeDateModule, MatCheckboxModule
   ],
   exports: [
     MatButtonModule, MatToolbarModule, MatIconModule, MatTabsModule,
     MatSidenavModule, MatListModule, MatTooltipModule, MatMenuModule,
     MatFormFieldModule, MatSelectModule, MatInputModule, MatBadgeModule,
-    MatChipsModule, MatSnackBarModule, MatProgressBarModule
+    MatChipsModule, MatSnackBarModule, MatProgressBarModule, MatDatepickerModule,
+    MatDatepickerModule, MatNativeDateModule, MatCheckboxModule
   ],
   declarations: []
 })

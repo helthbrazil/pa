@@ -18,9 +18,23 @@
     </mat-chip-list>
   </mat-form-field>
   <br>
-  <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="pt" [fullPage]="true"></ck-editor>
+  <ck-editor [config]="config" name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" language="pt"
+    [fullPage]="true"></ck-editor>
   <br>
-  <button (click)="enviarMensagem()" mat-raised-button color="primary">
+
+  <button style="margin-right: 10px;" (click)="enviarMensagem()" mat-raised-button color="primary">
     <mat-icon>send</mat-icon> Enviar
   </button>
+
+  <button style="margin-right: 10px;" (click)="picker.open()" mat-raised-button color="primary">
+    <mat-icon>schedule</mat-icon>Programar
+  </button>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" placeholder="Escolha a data de envio">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+  
+
 </div>

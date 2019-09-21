@@ -29,6 +29,18 @@ export class EnviarMensagensComponent {
     { name: 'Sd Marina' },
   ];
 
+  // CONFIGURAÇÃO EDITOR
+  config = {
+    toolbar: [     
+      { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
+      { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },    
+      { name: 'insert', items: [ 'SpecialChar', 'PageBreak' ] },
+      '/',
+      { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+      { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+      { name: 'tools', items: [ 'Maximize' ] }
+    ]
+  }
   constructor(private snackBar: MatSnackBar) {
 
   }
