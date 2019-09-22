@@ -1,9 +1,3 @@
-<section class="example-section">
-  <mat-progress-bar style="margin: 10px" *ngIf="showLoading" class="example-margin" color="primary"
-    mode="indeterminate">
-  </mat-progress-bar>
-</section>
-
 <div class="content">
   <perfect-scrollbar [config]='configScroll'>
     <mat-form-field class="example-chip-list">
@@ -23,6 +17,12 @@
       [fullPage]="true"></ck-editor>
     <br>
 
+    <section class="example-section">
+      <mat-progress-bar style="margin: 10px" *ngIf="showLoading" class="example-margin" color="primary"
+        mode="indeterminate">
+      </mat-progress-bar>
+    </section>
+
     <button style="margin-right: 10px;" (click)="enviarMensagem()" mat-raised-button color="primary">
       <mat-icon>send</mat-icon> Enviar
     </button>
@@ -36,6 +36,7 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker touchUi #picker></mat-datepicker>
     </mat-form-field>
+
 
   </perfect-scrollbar>
 </div>

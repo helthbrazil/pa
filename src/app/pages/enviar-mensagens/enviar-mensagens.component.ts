@@ -37,16 +37,16 @@ export class EnviarMensagensComponent {
 
   // CONFIGURAÇÃO EDITOR
   config = {
-    toolbar: [     
-      
-      { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
-      { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },    
-      { name: 'insert', items: [ 'SpecialChar', 'PageBreak' ] },
+    toolbar: [
+
+      { name: 'basicstyles', groups: ['basicstyles', 'cleanup'], items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'] },
+      { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'], items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+      { name: 'insert', items: ['SpecialChar', 'PageBreak'] },
       '/',
-      { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
-      { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
-      { name: 'tools', items: [ 'Maximize' ] },
-      { name: 'document', groups: [ 'mode', 'document', 'doctools' ]}
+      { name: 'styles', items: ['Format', 'Font', 'FontSize'] },
+      { name: 'colors', items: ['TextColor', 'BGColor'] },
+      { name: 'tools', items: ['Maximize'] },
+      { name: 'document', groups: ['mode', 'document', 'doctools'] }
     ]
   }
   constructor(private snackBar: MatSnackBar) {
@@ -73,7 +73,7 @@ export class EnviarMensagensComponent {
 
     setTimeout(() => {
       this.showLoading = false;
-      this.snackBar.open('Mensagem enviada com sucesso', 'Cancelar Envio', { duration: 5000 });
+      this.snackBar.open('Mensagem enviada com sucesso', undefined, { duration: 5000 });
     }, 3000);
   }
 

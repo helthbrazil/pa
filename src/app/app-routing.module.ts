@@ -5,10 +5,12 @@ import { ConfiguracoesComponent } from './pages/configuracoes/configuracoes.comp
 import { EnviarMensagensComponent } from './pages/enviar-mensagens/enviar-mensagens.component';
 import { GruposComponent } from './pages/grupos/grupos.component';
 import { ProcessosComponent } from './pages/processos/processos.component';
+import { CaixaEntradaComponent } from './pages/caixa-entrada/caixa-entrada.component';
 
 const routes: Routes = [
-  { pathMatch: 'full', path: '', redirectTo: 'caixas' },
+  { pathMatch: 'full', path: '', redirectTo: 'enviar' },
   { path: 'caixas', component: CaixasComponent },
+  { path: 'caixas/entrada', component: CaixaEntradaComponent },
   { path: 'enviar', component: EnviarMensagensComponent },
   { path: 'grupos', component: GruposComponent },
   { path: 'processos', component: ProcessosComponent },
@@ -16,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

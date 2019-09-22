@@ -7,3 +7,12 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
     padding: 20px;
     height: calc(100% - 70px);
 }
+
+.mat-snack-bar-container {
+    margin-bottom: 20px !important;
+ }
+
+ .snack {
+    background-color: gray;
+    color: white;
+ }

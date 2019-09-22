@@ -1,5 +1,69 @@
-<mat-list>
-  <pmmg-mensagem-item *ngFor="let mensagem of mensagens" [assunto]="mensagem?.assunto" [nome]="mensagem?.nome"
-    [horario]="mensagem?.horario">
-  </pmmg-mensagem-item>
-</mat-list>
+<perfect-scrollbar config='{ wheelSpeed: 1, swipeEasing: true}'>
+  <mat-list>
+    <div class="opcoes">
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-checkbox style="padding-right: 20px;" color="primary"></mat-checkbox>
+          <button color="accent" mat-icon-button [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+
+          <mat-menu yPosition="below" xPosition="after" #menu="matMenu">
+            <button mat-menu-item>
+              <span>Marcar Todas</span>
+            </button>
+            <button mat-menu-item>
+              <span>Nenhuma</span>
+            </button>
+            <button mat-menu-item>
+              <span>Lidas</span>
+            </button>
+            <button mat-menu-item>
+              <span>Não lidas</span>
+            </button>
+          </mat-menu>
+
+          <button matTooltipPosition="below" matTooltip="Arquivar" color="accent" mat-icon-button
+            aria-label="Example icon-button with a menu">
+            <mat-icon>archive</mat-icon>
+          </button>
+
+          <button matTooltipPosition="below" matTooltip="Excluir" color="accent" mat-icon-button
+            aria-label="Example icon-button with a menu">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+          <button matTooltipPosition="below" matTooltip="Marcadores" color="accent" mat-icon-button
+            aria-label="Example icon-button with a menu" [matMenuTriggerFor]="marcadoresMenu">
+            <mat-icon>label_important</mat-icon>
+          </button>
+
+
+          <mat-menu yPosition="below" xPosition="after" #marcadoresMenu="matMenu">
+            <mat-list>
+              <mat-list-item>
+                <mat-checkbox class="check" color="primary">Importante</mat-checkbox>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-checkbox class="check" color="primary">Prioridade</mat-checkbox>
+                <mat-list-item>
+                  <mat-checkbox class="check" color="primary">Importante</mat-checkbox>
+                </mat-list-item>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-menu>
+
+
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="lista-mensagens">
+      <pmmg-mensagem-item *ngFor="let mensagem of mensagens" [assunto]="mensagem?.assunto" [nome]="mensagem?.nome"
+        [horario]="mensagem?.horario">
+      </pmmg-mensagem-item>
+    </div>
+  </mat-list>
+
+</perfect-scrollbar>

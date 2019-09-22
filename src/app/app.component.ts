@@ -41,6 +41,7 @@ export class AppComponent implements OnDestroy, OnInit {
 
     // CRIAR ÍCONES SVG
     this.matIconRegistry.addSvgIcon('send', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/send.svg'));
+    this.matIconRegistry.addSvgIcon('check', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/check.svg'));
     this.matIconRegistry.addSvgIcon('in', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/in.svg'));
     this.matIconRegistry.addSvgIcon('out', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/out.svg'));
     this.matIconRegistry.addSvgIcon('pasta', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/pasta.svg'));
@@ -53,30 +54,47 @@ export class AppComponent implements OnDestroy, OnInit {
 
   private inicializarMenuLateral() {
     this.fillerNav = new Array<ItemMenu>();
+
     this.fillerNav.push({
       componente: '/enviar',
       label: 'Enviar Mensagens',
+      icon: 'assets/images/plus2.svg'
+    });
+
+    this.fillerNav.push({
+      componente: '/caixas/entrada',
+      label: 'Caixas de Entrada',
+      icon: 'assets/images/envelope.svg'
+    });
+
+    this.fillerNav.push({
+      componente: '/caixas/entrada',
+      label: 'Caixas de Saída',
       icon: 'assets/images/send.svg'
     });
+
     this.fillerNav.push({
-      componente: '/caixas',
-      label: 'Caixas de Mensagem',
-      icon: 'assets/images/mail.svg'
+      componente: '/caixas/entrada',
+      label: 'Arquivo',
+      icon: 'assets/images/archive.svg'
     });
+
     this.fillerNav.push({
       componente: '/grupos',
       label: 'Grupos',
-      icon: 'assets/images/grupo.svg'
+      icon: 'assets/images/group2.svg'
     });
+
     this.fillerNav.push({
       componente: '/processos',
       label: 'Processos',
-      icon: 'assets/images/processos.svg'
+      icon: 'assets/images/flow.svg'
     });
+
     this.fillerNav.push({
       componente: '/configuracoes',
       label: 'Configuração',
-      icon: 'assets/images/settings2.svg'
+      icon: 'assets/images/settings.svg'
     });
   }
 

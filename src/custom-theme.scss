@@ -38,5 +38,6 @@ $mat-pmmg-blue: (
 $custom-theme-primary: mat-palette($mat-pmmg-blue, 700);
 $custom-theme-accent:mat-palette($mat-teal, 800, 900);
 $custom-theme-warn: mat-palette($mat-red, 900);
+$custom-theme-gray: mat-palette($mat-red, 900);
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 @include angular-material-theme($custom-theme);
