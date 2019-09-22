@@ -60,7 +60,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/enviar',
       label: 'Enviar Mensagens',
       icon: 'assets/images/plus-off.svg',
-      iconOn: 'assets/images/plus2.svg'
+      iconOn: 'assets/images/plus-on.svg'
     });
 
     this.fillerNav.push({

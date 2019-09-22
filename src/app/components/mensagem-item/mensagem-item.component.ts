@@ -10,6 +10,7 @@ export class MensagemItemComponent implements OnInit {
   @Input() nome: string;
   @Input() assunto: string;
   @Input() horario: string;
+  @Input() mensagem: string;
 
   constructor() { }
 

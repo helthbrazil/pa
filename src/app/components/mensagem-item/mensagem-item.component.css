@@ -13,6 +13,7 @@
 .assunto {
     white-space: nowrap; 
     margin-left: 30px; 
+    font-size: 14px;
     max-width: 1600px; 
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -21,7 +22,8 @@
 .assuntoWrap {
     white-space: nowrap; 
     margin-left: 30px; 
-    max-width: 1450px; 
+    font-size: 14px;
+    max-width: 1400px; 
     overflow: hidden;
     text-overflow: ellipsis; 
 }

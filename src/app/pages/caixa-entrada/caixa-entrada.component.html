@@ -61,7 +61,7 @@
     </div>
     <div class="lista-mensagens">
       <pmmg-mensagem-item *ngFor="let mensagem of mensagens" [assunto]="mensagem?.assunto" [nome]="mensagem?.nome"
-        [horario]="mensagem?.horario">
+        [horario]="mensagem?.horario" [mensagem]="mensagem?.mensagem">
       </pmmg-mensagem-item>
     </div>
   </mat-list> 
