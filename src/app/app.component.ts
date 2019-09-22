@@ -104,6 +104,10 @@ export class AppComponent implements OnDestroy, OnInit {
       icon: 'assets/images/settings.svg',
       iconOn: 'assets/images/settings-on.svg'
     });
+
+    // TODO atualizar por rota
+    this.itemSelecionado = this.fillerNav[1];
+
   }
 
   public getRouterOutletState(outlet) {

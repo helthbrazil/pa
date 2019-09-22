@@ -18,3 +18,7 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
     background-color: gray;
     color: white;
  }
+
+ .example-spacer {
+    flex: 1 1 auto !important;
+  }

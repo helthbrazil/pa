@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./mensagem-item.component.css']
 })
 export class MensagemItemComponent implements OnInit {
-
+  isMostrarDetalhes = false;
   @Input() nome: string;
   @Input() assunto: string;
   @Input() horario: string;
@@ -14,6 +14,14 @@ export class MensagemItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  mostrarDetalhes() {
+    this.isMostrarDetalhes = true;
+  }
+
+  ocultarDetalhes() {
+    this.isMostrarDetalhes = false;
   }
 
 }

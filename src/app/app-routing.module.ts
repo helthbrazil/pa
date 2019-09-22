@@ -8,7 +8,7 @@ import { ProcessosComponent } from './pages/processos/processos.component';
 import { CaixaEntradaComponent } from './pages/caixa-entrada/caixa-entrada.component';
 
 const routes: Routes = [
-  { pathMatch: 'full', path: '', redirectTo: 'enviar' },
+  { pathMatch: 'full', path: '', redirectTo: 'caixas/entrada' },
   { path: 'caixas', component: CaixasComponent },
   { path: 'caixas/entrada', component: CaixaEntradaComponent },
   { path: 'enviar', component: EnviarMensagensComponent },

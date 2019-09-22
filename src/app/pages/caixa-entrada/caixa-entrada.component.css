@@ -1,6 +1,6 @@
 .opcoes{
     position: fixed;
-    top: 61px;
+    top: 60px;
     z-index: 10;
     background-color: white;
     width: 100%;
@@ -8,7 +8,7 @@
 
 .lista-mensagens{
     position: relative;
-    top: 50px;
+    margin-top: 120px;
 }
 
 .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
