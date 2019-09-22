@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grupos.component.css']
 })
 export class GruposComponent implements OnInit {
-
+  config = { wheelSpeed: 1, swipeEasing: true};
   constructor() { }
 
   ngOnInit() {

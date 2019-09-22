@@ -22,6 +22,7 @@ import { HoverItemDirective } from './diretivas/hover-item.directive';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ElevationDirective } from './diretivas/elevation.directive';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -38,7 +39,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ProcessosComponent,
     CaixaEntradaComponent,
     MensagemItemComponent,
-    HoverItemDirective
+    HoverItemDirective,
+    ElevationDirective
   ],
   imports: [
     BrowserAnimationsModule,

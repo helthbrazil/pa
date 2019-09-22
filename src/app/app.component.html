@@ -1,5 +1,5 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar toolbar mat-elevation-z10">
+  <mat-toolbar color="primary" class="example-toolbar toolbar mat-elevation-z2">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
@@ -14,10 +14,11 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56" [opened]="opened">
       <mat-nav-list>
-        <a (click)="selecionarItemMenu()" routerLink="{{nav.componente}}" matTooltip="{{nav.label}}"
+        <a (click)="selecionarItemMenu(nav)" routerLink="{{nav.componente}}" matTooltip="{{nav.label}}"
           matTooltipClass="tooltip-red" matTooltipPosition="below" [class.selecionado]="nav === itemSelecionado"
           mat-list-item *ngFor="let nav of fillerNav">
-          <img class="item-menu" width="24" height="24" src="{{nav.icon}}" alt="">
+          <img *ngIf="itemSelecionado === nav" class="item-menu" width="24" height="24" src="{{nav.iconOn}}" alt="">
+          <img *ngIf="itemSelecionado !== nav" class="item-menu" width="24" height="24" src="{{nav.icon}}" alt="">
         </a>
       </mat-nav-list>
     </mat-sidenav>

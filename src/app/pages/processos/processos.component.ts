@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./processos.component.css']
 })
 export class ProcessosComponent implements OnInit {
-
+  config = { wheelSpeed: 1, swipeEasing: true};
   constructor() { }
 
   ngOnInit() {

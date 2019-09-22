@@ -8,6 +8,7 @@ export interface ItemMenu {
   label: string;
   componente: string;
   icon: string;
+  iconOn: string;
 }
 @Component({
   selector: 'pmmg-root',
@@ -58,43 +59,50 @@ export class AppComponent implements OnDestroy, OnInit {
     this.fillerNav.push({
       componente: '/enviar',
       label: 'Enviar Mensagens',
-      icon: 'assets/images/plus2.svg'
+      icon: 'assets/images/plus-off.svg',
+      iconOn: 'assets/images/plus2.svg'
     });
 
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Caixas de Entrada',
-      icon: 'assets/images/envelope.svg'
+      icon: 'assets/images/envelope.svg',
+      iconOn: 'assets/images/envelope2.svg'
     });
 
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Caixas de Saída',
-      icon: 'assets/images/send.svg'
+      icon: 'assets/images/send.svg',
+      iconOn: 'assets/images/send-on2.svg'
     });
 
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Arquivo',
-      icon: 'assets/images/archive.svg'
+      icon: 'assets/images/archive.svg',
+      iconOn: 'assets/images/archive-on.svg'
     });
 
     this.fillerNav.push({
       componente: '/grupos',
       label: 'Grupos',
-      icon: 'assets/images/group2.svg'
+      icon: 'assets/images/group2.svg',
+      iconOn: 'assets/images/group-on.svg'
     });
 
     this.fillerNav.push({
       componente: '/processos',
       label: 'Processos',
-      icon: 'assets/images/flow.svg'
+      icon: 'assets/images/flow.svg',
+      iconOn: 'assets/images/flow-on.svg'
     });
 
     this.fillerNav.push({
       componente: '/configuracoes',
       label: 'Configuração',
-      icon: 'assets/images/settings.svg'
+      icon: 'assets/images/settings.svg',
+      iconOn: 'assets/images/settings-on.svg'
     });
   }
 
@@ -102,7 +110,8 @@ export class AppComponent implements OnDestroy, OnInit {
     return outlet.isActivated ? outlet.activatedRoute : '';
   }
 
-  selecionarItemMenu() {
+  selecionarItemMenu(item) {
+    this.itemSelecionado = item;
     if (this.mobileQuery.matches) {
       this.snav.toggle();
     }

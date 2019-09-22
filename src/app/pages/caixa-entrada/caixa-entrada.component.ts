@@ -13,13 +13,14 @@ export interface Mensagem {
 })
 export class CaixaEntradaComponent implements OnInit {
   mensagens: Array<Mensagem>;
+  config = { wheelSpeed: 1, swipeEasing: true};
 
   constructor() { }
 
   ngOnInit() {
     this.mensagens = new Array<Mensagem>();
 
-    for (let i = 0; i <  30; i++) {
+    for (let i = 0; i < 20; i++) {
       this.mensagens.push({
         nome: 'Hebert Ferreira',
         assunto: 'Qualquer',
@@ -30,4 +31,14 @@ export class CaixaEntradaComponent implements OnInit {
 
   }
 
+  verMais() {
+    for (let i = 0; i < 10; i++) {
+      this.mensagens.push({
+        nome: 'Hebert Ferreira',
+        assunto: 'Qualquer',
+        horario: '00:23'
+      });
+    }
+
+  }
 }

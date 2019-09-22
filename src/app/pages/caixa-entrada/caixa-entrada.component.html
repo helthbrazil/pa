@@ -1,6 +1,6 @@
-<perfect-scrollbar config='{ wheelSpeed: 1, swipeEasing: true}'>
+<perfect-scrollbar [config]="config">
   <mat-list>
-    <div class="opcoes">
+    <div class="opcoes mat-elevation-z6">
       <mat-list role="list">
         <mat-list-item role="listitem">
           <mat-checkbox style="padding-right: 20px;" color="primary"></mat-checkbox>
@@ -64,6 +64,5 @@
         [horario]="mensagem?.horario">
       </pmmg-mensagem-item>
     </div>
-  </mat-list>
-
+  </mat-list> 
 </perfect-scrollbar>

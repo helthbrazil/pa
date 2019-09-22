@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./configuracoes.component.css']
 })
 export class ConfiguracoesComponent implements OnInit {
-
+  config = { wheelSpeed: 1, swipeEasing: true};
   constructor() { }
 
   ngOnInit() {
