@@ -15,13 +15,14 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="50" [opened]="opened">
       <mat-nav-list>
-        <a (click)="selecionarItemMenu(nav)" routerLink="{{nav.componente}}" matTooltip="{{nav.label}}"
+        <a (click)="selecionarItemMenu(nav)" routerLink="{{nav?.componente}}" matTooltip="{{nav?.label}}"
           matTooltipClass="tooltip-red" matTooltipPosition="below" [class.selecionado]="nav === itemSelecionado"
           mat-list-item *ngFor="let nav of fillerNav">
-          <img *ngIf="itemSelecionado === nav" class="item-menu" width="24" height="24" src="{{nav.iconOn}}" alt="">
-          <img *ngIf="itemSelecionado !== nav" class="item-menu" width="24" height="24" src="{{nav.icon}}" alt="">
+          <img *ngIf="itemSelecionado === nav" class="item-menu" width="24" height="24" src="{{nav?.iconOn}}" alt="">
+          <img *ngIf="itemSelecionado !== nav" class="item-menu" width="24" height="24" src="{{nav?.icon}}" alt="">
 
-          <p style="padding-left: 0px; margin-top: 0px" matBadgeColor="warn" matBadge="{{nav?.count}}" matBadgePosition="below after" matBadgeSize="medium">
+          <p style="padding-left: 0px; margin-top: 0px;" matBadgeColor="warn" matBadge="{{nav?.count}}"
+            matBadgePosition="below after" matBadgeSize="medium">
           </p>
         </a>
       </mat-nav-list>

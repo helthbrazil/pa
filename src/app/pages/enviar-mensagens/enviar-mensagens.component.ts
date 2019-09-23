@@ -39,7 +39,9 @@ export class EnviarMensagensComponent {
   config = {
     toolbar: [
 
+      // tslint:disable-next-line:max-line-length
       { name: 'basicstyles', groups: ['basicstyles', 'cleanup'], items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'] },
+      // tslint:disable-next-line:max-line-length
       { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'], items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
       { name: 'insert', items: ['SpecialChar', 'PageBreak'] },
       '/',
@@ -48,7 +50,7 @@ export class EnviarMensagensComponent {
       { name: 'tools', items: ['Maximize'] },
       { name: 'document', groups: ['mode', 'document', 'doctools'] }
     ]
-  }
+  };
   constructor(private snackBar: MatSnackBar) {
 
   }

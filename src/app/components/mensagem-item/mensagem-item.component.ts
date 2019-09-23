@@ -25,7 +25,6 @@ export class MensagemItemComponent implements OnInit {
   }
 
   selecionar(event) {
-    debugger;
     this.mensagem['checked'] = event['checked'];
     this.selecionarEvent.emit(this.mensagem);
   }
