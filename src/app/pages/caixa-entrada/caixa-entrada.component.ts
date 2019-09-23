@@ -15,7 +15,7 @@ export class CaixaEntradaComponent implements OnInit {
   ngOnInit() {
     this.mensagens = new Array<IMensagem>();
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 1; i <= 20; i++) {
       let isLida = false;
       // tslint:disable-next-line:max-line-length
       let mensagem = 'asd asd asd asd asd as dsadas sdasdasdasd sadasd sadasdasd asdasd asdasdasd asdasd asdasdasdasda dasd asd asd';

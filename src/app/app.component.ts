@@ -9,6 +9,7 @@ export interface ItemMenu {
   componente: string;
   icon: string;
   iconOn: string;
+  count: number;
 }
 @Component({
   selector: 'pmmg-root',
@@ -60,12 +61,14 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/enviar',
       label: 'Enviar Mensagens',
       icon: 'assets/images/plus-off.svg',
+      count: undefined,
       iconOn: 'assets/images/plus-on.svg'
     });
 
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Caixas de Entrada',
+      count: 27,
       icon: 'assets/images/envelope.svg',
       iconOn: 'assets/images/envelope2.svg'
     });
@@ -73,6 +76,7 @@ export class AppComponent implements OnDestroy, OnInit {
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Caixas de Saída',
+      count: 7,
       icon: 'assets/images/send.svg',
       iconOn: 'assets/images/send-on2.svg'
     });
@@ -80,12 +84,14 @@ export class AppComponent implements OnDestroy, OnInit {
     this.fillerNav.push({
       componente: '/caixas/entrada',
       label: 'Arquivo',
+      count: 3,
       icon: 'assets/images/archive.svg',
       iconOn: 'assets/images/archive-on.svg'
     });
 
     this.fillerNav.push({
       componente: '/grupos',
+      count: undefined,
       label: 'Grupos',
       icon: 'assets/images/group2.svg',
       iconOn: 'assets/images/group-on.svg'
@@ -94,6 +100,7 @@ export class AppComponent implements OnDestroy, OnInit {
     this.fillerNav.push({
       componente: '/processos',
       label: 'Processos',
+      count: undefined,
       icon: 'assets/images/flow.svg',
       iconOn: 'assets/images/flow-on.svg'
     });
@@ -101,6 +108,7 @@ export class AppComponent implements OnDestroy, OnInit {
     this.fillerNav.push({
       componente: '/configuracoes',
       label: 'Configuração',
+      count: undefined,
       icon: 'assets/images/settings.svg',
       iconOn: 'assets/images/settings-on.svg'
     });

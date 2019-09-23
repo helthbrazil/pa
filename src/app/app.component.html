@@ -4,6 +4,7 @@
       <mat-icon>menu</mat-icon>
     </button>
     <h1 class="example-app-name">{{title}}</h1>
+
     <span class="example-spacer"></span>
     <mat-icon matTooltip="Adicionar Favorito" class="example-icon">favorite</mat-icon>
     <mat-icon matTooltip="Excluir Item" class="example-icon">more_vert</mat-icon>
@@ -19,6 +20,9 @@
           mat-list-item *ngFor="let nav of fillerNav">
           <img *ngIf="itemSelecionado === nav" class="item-menu" width="24" height="24" src="{{nav.iconOn}}" alt="">
           <img *ngIf="itemSelecionado !== nav" class="item-menu" width="24" height="24" src="{{nav.icon}}" alt="">
+
+          <p style="padding-left: 0px; margin-top: 0px" matBadgeColor="warn" matBadge="{{nav?.count}}" matBadgePosition="below after" matBadgeSize="medium">
+          </p>
         </a>
       </mat-nav-list>
     </mat-sidenav>

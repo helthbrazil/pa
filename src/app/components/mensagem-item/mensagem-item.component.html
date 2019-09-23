@@ -4,18 +4,35 @@
   <mat-list-item>
     <mat-icon mat-list-icon class="icon-display" svgIcon="pasta">folder</mat-icon>
     <div style="width: 200x; float: left;"> {{mensagem?.nome}} </div>
-   
+
     <div [ngClass]="{assuntoWrap: isMostrarDetalhes, assunto: !isMostrarDetalhes}"><strong
         [ngClass]="{assuntoLido: mensagem.isLida, assuntoNaoLido: !mensagem.isLida}">{{mensagem?.assunto}}</strong> -
       {{mensagem?.mensagem}}</div>
   </mat-list-item>
   <span class="example-spacer"></span>
+
+  <button *ngIf="!isMostrarDetalhes" matTooltipPosition="below" matTooltip="Ver anexo" color="accent" mat-icon-button
+    aria-label="Example icon-button with a menu">
+    <mat-icon>attachment</mat-icon>
+  </button>
+
   <p *ngIf="!isMostrarDetalhes">{{mensagem?.horario}}</p>
 
   <div *ngIf="isMostrarDetalhes">
-    <button matTooltipPosition="below" matTooltip="Ver anexo" color="accent" mat-icon-button
+
+    <button matTooltipPosition="below" matTooltip="Responder" color="accent" mat-icon-button
       aria-label="Example icon-button with a menu">
-      <mat-icon>attach_file</mat-icon>
+      <mat-icon>reply</mat-icon>
+    </button>
+
+    <button matTooltipPosition="below" matTooltip="Responder" color="accent" mat-icon-button
+      aria-label="Example icon-button with a menu">
+      <mat-icon>reply</mat-icon>
+    </button>
+
+    <button matTooltipPosition="below" matTooltip="Responder para todos" color="accent" mat-icon-button
+      aria-label="Example icon-button with a menu">
+      <mat-icon>reply_all</mat-icon>
     </button>
 
     <button matTooltipPosition="below" matTooltip="Arquivar" color="accent" mat-icon-button

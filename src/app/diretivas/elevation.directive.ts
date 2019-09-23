@@ -10,11 +10,11 @@ export class ElevationDirective {
   }
 
   @HostListener('mouseover') onHover() {
-    this.el.nativeElement.classList.add('mat-elevation-z4');
+    this.el.nativeElement.classList.add('mat-elevation-z2');
   }
 
   @HostListener('mouseleave') onLeave() {
-    this.el.nativeElement.classList.remove('mat-elevation-z4');
+    this.el.nativeElement.classList.remove('mat-elevation-z2');
   }
 
 }
