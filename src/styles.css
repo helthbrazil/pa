@@ -1,24 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 .content {
-    padding: 20px;
-    padding-top: 80px;
-    top: 60px !important;
-    height: calc(100% - 70px);
+  padding: 10px;
+  margin-top: 60px;
+  top: 60px !important;
+  height: calc(100% - 70px);
 }
 
 .mat-snack-bar-container {
-    margin-bottom: 20px !important;
- }
+  margin-bottom: 20px !important;
+}
 
- .snack {
-    background-color: gray;
-    color: white;
- }
+.snack {
+  background-color: gray;
+  color: white;
+}
 
- .example-spacer {
-    flex: 1 1 auto !important;
-  }
+.example-spacer {
+  flex: 1 1 auto !important;
+}
+
+ 

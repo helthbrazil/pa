@@ -12,6 +12,7 @@
   
   .mat-toolbar {
     position: fixed;
+    min-height: 64px;
     z-index: 1000 !important;
   }
 

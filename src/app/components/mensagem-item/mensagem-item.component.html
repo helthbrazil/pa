@@ -1,14 +1,16 @@
-<mat-list-item (mouseenter)="mostrarDetalhes()" (mouseleave)="ocultarDetalhes()" pmmgHoverItem pmmgElevation>
-  <mat-checkbox class="check" color="primary"></mat-checkbox>
+<mat-list-item class="mensagem-lida" [ngClass]="{lida: mensagem.isLida}" (mouseenter)="mostrarDetalhes()"
+  (mouseleave)="ocultarDetalhes()" pmmgHoverItem pmmgElevation>
+  <mat-checkbox (change)="selecionar($event)" [checked]="mensagem?.checked" class="check" color="accent"></mat-checkbox>
   <mat-list-item>
     <mat-icon mat-list-icon class="icon-display" svgIcon="pasta">folder</mat-icon>
-    <div style="width: 200x; float: left;"> {{nome}} </div>
-    <div style="" [ngClass]="{assuntoWrap: isMostrarDetalhes, assunto: !isMostrarDetalhes}"><b>{{assunto}}</b> -
-      {{mensagem}}</div>
+    <div style="width: 200x; float: left;"> {{mensagem?.nome}} </div>
+   
+    <div [ngClass]="{assuntoWrap: isMostrarDetalhes, assunto: !isMostrarDetalhes}"><strong
+        [ngClass]="{assuntoLido: mensagem.isLida, assuntoNaoLido: !mensagem.isLida}">{{mensagem?.assunto}}</strong> -
+      {{mensagem?.mensagem}}</div>
   </mat-list-item>
   <span class="example-spacer"></span>
-  <p *ngIf="!isMostrarDetalhes">{{horario}}</p>
-
+  <p *ngIf="!isMostrarDetalhes">{{mensagem?.horario}}</p>
 
   <div *ngIf="isMostrarDetalhes">
     <button matTooltipPosition="below" matTooltip="Ver anexo" color="accent" mat-icon-button

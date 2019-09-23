@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IMensagem } from 'src/app/shared/IMensagem.';
 
 @Component({
   selector: 'pmmg-mensagem-item',
@@ -7,10 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MensagemItemComponent implements OnInit {
   isMostrarDetalhes = false;
-  @Input() nome: string;
-  @Input() assunto: string;
-  @Input() horario: string;
-  @Input() mensagem: string;
+  @Input() mensagem: IMensagem;
+  @Output() selecionarEvent = new EventEmitter();
 
   constructor() { }
 
@@ -23,6 +22,12 @@ export class MensagemItemComponent implements OnInit {
 
   ocultarDetalhes() {
     this.isMostrarDetalhes = false;
+  }
+
+  selecionar(event) {
+    debugger;
+    this.mensagem['checked'] = event['checked'];
+    this.selecionarEvent.emit(this.mensagem);
   }
 
 }

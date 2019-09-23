@@ -3,23 +3,24 @@
     <div class="opcoes mat-elevation-z6">
       <mat-list role="list">
         <mat-list-item role="listitem">
-          <mat-checkbox style="padding-right: 20px;" color="primary"></mat-checkbox>
+          <mat-checkbox #checkAll (change)="selecionarTodos($event)" style="padding-right: 20px;" color="primary">
+          </mat-checkbox>
           <button color="accent" mat-icon-button [matMenuTriggerFor]="menu"
             aria-label="Example icon-button with a menu">
             <mat-icon>more_vert</mat-icon>
           </button>
 
           <mat-menu yPosition="below" xPosition="after" #menu="matMenu">
-            <button mat-menu-item>
+            <button (click)="selecionarTodos({checked: true})" mat-menu-item>
               <span>Marcar Todas</span>
             </button>
-            <button mat-menu-item>
+            <button (click)="limparSelecao()" mat-menu-item>
               <span>Nenhuma</span>
             </button>
-            <button mat-menu-item>
+            <button (click)="selecionarLidas()" mat-menu-item>
               <span>Lidas</span>
             </button>
-            <button mat-menu-item>
+            <button (click)="selecionarNaoLidas()" mat-menu-item>
               <span>Não lidas</span>
             </button>
           </mat-menu>
@@ -60,9 +61,9 @@
       </mat-list>
     </div>
     <div class="lista-mensagens">
-      <pmmg-mensagem-item *ngFor="let mensagem of mensagens" [assunto]="mensagem?.assunto" [nome]="mensagem?.nome"
-        [horario]="mensagem?.horario" [mensagem]="mensagem?.mensagem">
+      <pmmg-mensagem-item (selecionarEvent)="selecionarItem($event)" *ngFor="let mensagem of mensagens"
+        [mensagem]="mensagem">
       </pmmg-mensagem-item>
     </div>
-  </mat-list> 
+  </mat-list>
 </perfect-scrollbar>

@@ -2,12 +2,24 @@
     padding-right: 10px;
 }
 
+.lida{
+    background-color: #eaeaea !important;
+}
+
 .icon-display {
     transform: scale(0.8);
  }
 
  .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
     color: #a0a0a0;
+}
+
+.assuntoLido{
+    font-weight: 100 !important;
+}
+
+.assuntoNaoLido{
+    font-weight: 500 !important;
 }
 
 .assunto {
@@ -26,4 +38,13 @@
     max-width: 1400px; 
     overflow: hidden;
     text-overflow: ellipsis; 
+}
+
+p.assunto-text {
+    font-weight: 2;
+}
+
+mat-chip {
+    max-width: 100px;
+    max-height: 20px;
 }
