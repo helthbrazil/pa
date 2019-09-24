@@ -18,7 +18,7 @@ export interface ItemMenu {
 })
 export class AppComponent implements OnDestroy, OnInit {
   @ViewChild('snav') snav;
-  title = 'Painel Administrativo';
+  title = `Angular's Mail`;
   mobileQuery: MediaQueryList;
   opened: boolean;
 
