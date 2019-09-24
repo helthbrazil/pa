@@ -11,6 +11,11 @@ body {
   overflow: hidden !important;
 }
 
+.ps__thumb-y {
+  background-color: rgb(177, 177, 202) !important;
+  min-width: 7px;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -34,5 +39,3 @@ body {
 .example-spacer {
   flex: 1 1 auto !important;
 }
-
- 
