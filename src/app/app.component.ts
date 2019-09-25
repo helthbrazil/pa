@@ -9,6 +9,7 @@ export interface ItemMenu {
   componente: string;
   icon: string;
   iconOn: string;
+  iconSize: number;
   count: number;
 }
 @Component({
@@ -18,7 +19,7 @@ export interface ItemMenu {
 })
 export class AppComponent implements OnDestroy, OnInit {
   @ViewChild('snav') snav;
-  title = `Angular's Mail`;
+  title = `Painel Administrativo`;
   mobileQuery: MediaQueryList;
   opened: boolean;
 
@@ -56,12 +57,14 @@ export class AppComponent implements OnDestroy, OnInit {
 
   private inicializarMenuLateral() {
     this.fillerNav = new Array<ItemMenu>();
+    const iconSize = 22;
 
     this.fillerNav.push({
       componente: '/enviar',
       label: 'Enviar Mensagens',
       icon: 'assets/images/plus-off.svg',
       count: undefined,
+      iconSize: iconSize,
       iconOn: 'assets/images/plus-on.svg'
     });
 
@@ -70,6 +73,7 @@ export class AppComponent implements OnDestroy, OnInit {
       label: 'Caixas de Entrada',
       count: 27,
       icon: 'assets/images/envelope.svg',
+      iconSize: iconSize,
       iconOn: 'assets/images/envelope2.svg'
     });
 
@@ -77,6 +81,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/caixas/entrada',
       label: 'Caixas de Saída',
       count: 7,
+      iconSize: iconSize,
       icon: 'assets/images/send.svg',
       iconOn: 'assets/images/send-on2.svg'
     });
@@ -85,6 +90,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/caixas/entrada',
       label: 'Arquivo',
       count: 3,
+      iconSize: iconSize,
       icon: 'assets/images/archive.svg',
       iconOn: 'assets/images/archive-on.svg'
     });
@@ -93,6 +99,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/grupos',
       count: undefined,
       label: 'Grupos',
+      iconSize: iconSize,
       icon: 'assets/images/group2.svg',
       iconOn: 'assets/images/group-on.svg'
     });
@@ -101,6 +108,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/processos',
       label: 'Processos',
       count: undefined,
+      iconSize: iconSize,
       icon: 'assets/images/flow.svg',
       iconOn: 'assets/images/flow-on.svg'
     });
@@ -109,6 +117,7 @@ export class AppComponent implements OnDestroy, OnInit {
       componente: '/configuracoes',
       label: 'Configuração',
       count: undefined,
+      iconSize: iconSize,
       icon: 'assets/images/settings.svg',
       iconOn: 'assets/images/settings-on.svg'
     });
