@@ -1,4 +1,4 @@
-<mat-list-item class="mensagem-lida" [ngClass]="{lida: mensagem.isLida}" (mouseenter)="mostrarDetalhes()"
+<mat-list-item style="height: 45px" class="mensagem-lida" [ngClass]="{lida: mensagem.isLida}" (mouseenter)="mostrarDetalhes()"
   (mouseleave)="ocultarDetalhes()" pmmgHoverItem pmmgElevation>
   <mat-checkbox (change)="selecionar($event)" [checked]="mensagem?.checked" class="check" color="accent"></mat-checkbox>
   <mat-list-item>
